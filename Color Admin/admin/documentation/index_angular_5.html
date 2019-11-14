@@ -1,0 +1,2134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title> Documentation - Color Admin</title>
+    <!-- Bootstrap styles -->
+    <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/bootstrap/css/docs.css" rel="stylesheet">
+    <link href="assets/bootstrap/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
+	
+	<div class="navbar navbar-inverse navbar-page">
+		<div class="navbar-inner">
+			<div class="container">
+				<button type="button" class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="brand" href="#">Admin Template</a>
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li class="">
+							<a href="index.html">Template Design</a>
+						</li>
+						<li class="">
+							<a href="index_ajax.html">Ajax Version</a>
+						</li>
+						<li class="">
+							<a href="index_angular_1x.html">Angular 1.x Version</a>
+						</li>
+						<li class="active">
+							<a href="index_angular_5.html">Angular 5.0 Version</a>
+						</li>
+						<li class="">
+							<a href="index_laravel.html">Laravel Version</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header class="jumbotron subhead" id="overview">
+		<div class="container">
+			<h1 class="text-center">Color Admin</h1>
+			<p class="lead text-center">&ldquo;Angular 5 Version&rdquo; Documentation by &ldquo;Sean Ngu&rdquo; v4.0</p>
+		</div>
+		<div class="jumbotron-cover"></div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="span12">
+				<div class="well with-cover">
+					<div class="well-cover" style="background-image: url(assets/images/angular.jpg); background-size: auto 80%; background-position: center; background-repeat: no-repeat; background-color: #fff;"><span style="position: absolute; bottom: 25px; right: 70px; font-weight: bold;">5.0</span></div>
+					<p>
+						<strong>
+							Created: 31/October/2014<br>
+							By: Sean Ngu<br>
+							Email: <a href="mailto:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>
+						</strong>
+					</p>
+					<p>
+						Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file,
+						please feel free to email your question to my email <a href="mailTo:nguoksiong@live.co.uk">nguoksiong@live.co.uk</a>. Thanks so much!
+					</p>
+			
+				</div>
+			</div><!-- end span12 -->
+		</div><!-- end row -->
+		<div class="row">
+			<div class="span3 bs-docs-sidebar">
+				<ul class="nav nav-list bs-docs-sidenav affix-top">
+					<li><a href="#installation"><i class="icon-chevron-right"></i>Installation</a></li>
+					<li><a href="#fileStructure"><i class="icon-chevron-right"></i>File Structure</a></li>
+					<li><a href="#pageStructure"><i class="icon-chevron-right"></i>Page Structure</a></li>
+					<li><a href="#page-beginning"><i class="icon-chevron-right"></i>Beginning of Page</a></li>
+					<li><a href="#page-head"><i class="icon-chevron-right"></i>Page Head</a></li>
+					<li><a href="#page-top-menu"><i class="icon-chevron-right"></i>Page Top Menu</a></li>
+					<li><a href="#page-sidebar"><i class="icon-chevron-right"></i>Page Sidebar</a></li>
+					<li><a href="#page-content"><i class="icon-chevron-right"></i>Page Content</a></li>
+					<li><a href="#page-end"><i class="icon-chevron-right"></i>End of Page (Javascripts)</a></li>
+					<li><a href="#page-options"><i class="icon-chevron-right"></i>Page Options</a></li>
+					<li><a href="#page-less"><i class="icon-chevron-right"></i>LESS</a></li>
+					<li><a href="#npm-package"><i class="icon-chevron-right"></i>NPM Package</a></li>
+					<li><a href="#change-log"><i class="icon-chevron-right"></i>Change Log</a></li>
+				</ul>
+			</div>
+			<div class="span9">
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="installation"><strong>A) Installation</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Follow the following step to install the angular 5 in your localhost<br />
+							You may refer to their official documentation for how to setup the development environment. <br />
+							<a href="https://angular.io/guide/setup" target="_blank">Setup Guide</a>
+						</p>
+<pre class="prettyprint linenums">
+cd /your-path-url/template_angular5
+npm install 
+ng serve
+</pre>
+						<p>
+						Verify that you are running at least node <code>6.9.x</code> and <code>npm 3.x.x</code> by running <code>node -v</code> and <code>npm -v</code> in a terminal/console window. Older versions produce errors, but newer versions are fine.
+						</p>
+						<div class="alert alert-warning" style="text-shadow: none; font-size: 12px; line-height: 16px; color: #755c30;">
+							<b style="float: left; font-size: 24px; width: 30px; height: 30px; line-height: 30px; text-align: center; background: #f5e5c6; border-radius: 36px; margin: 0 8px 0 -5px;">!</b> If you are moving out the angular 5 version, <b>DO NOT</b> forget to copy over the assets folder <b>SAME LEVEL</b> to the angular 5 folder. This is because we are copying the css files from assets folder during the installation. 
+						</div>
+<pre class="prettyprint linenums">
+assets/
+template_angular5/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="fileStructure"><strong>B) File Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>File structure overview for Angular JS 5 Version</p>
+						
+<pre class="prettyprint linenums">
+template_content_angularjs4/
+├── karma.conf.js
+├── package-lock.json
+├── package.json
+├── protractor.conf.js
+├── README.md
+├── tsconfig.json
+├── tslint.json
+├── e2e/
+└── src/
+    ├── index.html
+    ├── favicon.ico
+    ├── main.ts
+    ├── polyfills.ts
+    ├── styles.css
+    ├── tsconfig.app.json
+    ├── tsconfig.spec.json
+    ├── typings.d.ts
+    ├── app/
+    │   ├── app.routing.module.ts
+    │   ├── app.component.css
+    │   ├── app.component.html
+    │   ├── app.component.spec.ts
+    │   ├── app.component.ts
+    │   ├── app.module.ts
+    │   ├── global.ts
+    │   ├── app.html
+    │   ├── footer/
+    │   ├── header/
+    │   ├── pages/
+    │   ├── sidebar/
+    │   ├── sidebar-right/
+    │   └── top-menu/
+    ├── assets/ 
+    │   ├── img/
+    │   └── plugins/
+    └── environments/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="pageStructure"><strong>C) Page Structure</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>This template can be used as an fluid layout with a max of 12 columns next to each other. The general template structure is the same throughout the template. Here is the general structure.</p>
+<pre class="prettyprint linenums">
+&lt;ng2-slim-loading-bar [ngClass]="{ 'top': pageSettings.pageEmpty }"&gt;&lt;/ng2-slim-loading-bar&gt;
+
+&lt;!-- begin #page-container --&gt;
+&lt;div id="page-container" class="page-container fade page-sidebar-fixed page-header-fixed show" [ngClass]="{
+    'has-scroll' : pageHasScroll,
+    'page-sidebar-minified': pageSettings.pageSidebarMinified,
+    'page-with-footer': pageSettings.pageWithFooter,
+    'page-content-full-height': pageSettings.pageContentFullHeight,
+    'page-without-sidebar': pageSettings.pageWithoutSidebar,
+    'page-with-right-sidebar': pageSettings.pageSidebarRight,
+    'page-with-two-sidebar': pageSettings.pageSidebarTwo,
+    'page-with-wide-sidebar': pageSettings.pageSidebarWide,
+    'page-right-sidebar-collapsed': pageSettings.pageSidebarRightCollapsed,
+    'page-with-light-sidebar': pageSettings.pageSidebarLight,
+    'page-with-top-menu': pageSettings.pageTopMenu,
+    'page-sidebar-toggled': pageSettings.pageMobileSidebarToggled,
+    'page-right-sidebar-toggled': pageSettings.pageMobileRightSidebarToggled,
+    'p-0': pageSettings.pageEmpty
+  }"&gt;
+
+  &lt;top-menu *ngIf="pageSettings.pageTopMenu && !pageSettings.pageEmpty"&gt;&lt;/top-menu&gt;
+
+  &lt;header (toggleSidebarRightCollapsed)="onToggleSidebarRight($event)" 
+    (toggleMobileSidebar)="onToggleMobileSidebar($event)" 
+    (toggleMobileRightSidebar)="onToggleMobileRightSidebar($event)" 
+    [pageSidebarTwo]="pageSettings.pageSidebarTwo" 
+    *ngIf="!pageSettings.pageEmpty"&gt;&lt;/header&gt;
+
+  &lt;sidebar (toggleSidebarMinified)="onToggleSidebarMinified($event)" 
+    (hideMobileSidebar)="onHideMobileSidebar($event)" 
+    *ngIf="!pageSettings.pageWithoutSidebar && !pageSettings.pageEmpty" 
+    [pageSidebarTransparent]="pageSettings.pageSidebarTransparent"&gt;&lt;/sidebar&gt;
+
+  &lt;sidebar-right (hideMobileRightSidebar)="onHideMobileRightSidebar($event)" 
+    *ngIf="pageSettings.pageSidebarTwo && !pageSettings.pageEmpty"&gt;&lt;/sidebar-right&gt;
+
+  &lt;div id="content" class="content" [ngClass]="{
+    'content-full-width': pageSettings.pageContentFullWidth,
+    'content-inverse-mode': pageSettings.pageContentInverseMode,
+    'p-0 m-0': pageSettings.pageEmpty
+  }"&gt;
+    &lt;router-outlet&gt;&lt;/router-outlet&gt;
+  &lt;/div&gt;
+
+  &lt;footer *ngIf="pageSettings.pageWithFooter"&gt;&lt;/footer&gt;
+&lt;/div&gt;
+&lt;!-- end #page-container --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-beginning"><strong>D) Beginning of Page</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Below code is used to detect the internet explorer for browser compatibility & styling setting usage.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if IE 8]&gt; &lt;html lang="en" class="ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if !IE]&gt;&lt;!--&gt;
+&lt;html lang="en"&gt;
+&lt;!--&lt;![endif]--&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-head"><strong>E) Page Head</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Page head contains metadata, javascript and css files:</p>
+<pre class="prettyprint linenums">
+&lt;head&gt;
+  &lt;meta charset="utf-8" /&gt;
+  &lt;title&gt;Color Admin&lt;/title&gt;
+  &lt;base href="/"&gt;
+  &lt;meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" 
+        name="viewport" /&gt;
+  &lt;meta content="" name="description" /&gt;
+  &lt;meta content="" name="author" /&gt;
+  &lt;link rel="icon" type="image/x-icon" href="favicon.ico" /&gt;
+&lt;/head&gt;
+&lt;body class="angular5" detect-scroll (onScroll)="handleScroll($event)"&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-top-menu"><strong>F) Top Menu</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #header --&gt;
+&lt;div id="header" class="header navbar-default"&gt;
+  &lt;!-- begin navbar-header --&gt;
+  &lt;div class="navbar-header"&gt;
+    &lt;ng-container *ngIf="this.pageSidebarTwo"&gt;
+      &lt;button type="button" class="navbar-toggle pull-left" (click)="mobileSidebarToggle()"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+      &lt;button type="button" class="navbar-toggle pull-right" (click)="mobileRightSidebarToggle()"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/ng-container&gt;
+    &lt;a href="/" class="navbar-brand"&gt;&lt;span class="navbar-logo"&gt;&lt;/span&gt; &lt;b&gt;Color&lt;/b&gt; Admin&lt;/a&gt;
+    &lt;button type="button" class="navbar-toggle" (click)="mobileSidebarToggle()" 
+      *ngIf="!this.pageSidebarTwo"&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;span class="icon-bar"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+  &lt;!-- end navbar-header --&gt;
+
+  &lt;!-- begin header-nav --&gt;
+  &lt;ul class="navbar-nav navbar-right"&gt;
+    &lt;li&gt;
+      &lt;form class="navbar-form"&gt;
+        &lt;div class="form-group"&gt;
+          &lt;input type="text" class="form-control" placeholder="Enter keyword" /&gt;
+          &lt;button type="submit" class="btn btn-search"&gt;&lt;i class="fa fa-search"&gt;&lt;/i&gt;&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/li&gt;
+    &lt;li class="dropdown" ngbDropdown&gt;
+      &lt;a href="javascript:;" ngbDropdownToggle class="dropdown-toggle f-s-14"&gt;
+        &lt;i class="fa fa-bell"&gt;&lt;/i&gt;
+        &lt;span class="label"&gt;5&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;ul class="dropdown-menu media-list dropdown-menu-right" ngbDropdownMenu&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li class="dropdown navbar-user" ngbDropdown&gt;
+      &lt;a href="javascript:;" class="dropdown-toggle" ngbDropdownToggle&gt;
+        &lt;img src="/assets/img/user/user-13.jpg" alt="" /&gt;
+        &lt;span class="d-none d-md-inline"&gt;Adam Schwartz&lt;/span&gt; &lt;b class="caret"&gt;&lt;/b&gt;
+      &lt;/a&gt;
+      &lt;div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu&gt;
+        ...
+      &lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class="divider d-none d-md-block" *ngIf="this.pageSidebarTwo"&gt;&lt;/li&gt;
+    &lt;li class="d-none d-md-block" *ngIf="this.pageSidebarTwo"&gt;
+      &lt;a href="javascript:;" (click)="toggleSidebarRight()" class="f-s-14"&gt;
+        &lt;i class="fa fa-th"&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;!-- end header navigation right --&gt;
+&lt;/div&gt;
+&lt;!-- end #header --&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-sidebar"><strong>G) Sidebar</strong> - <a href="#top">top</a></h3>
+						</div>
+<pre class="prettyprint linenums">
+&lt;!-- begin #sidebar --&gt;
+&lt;div id="sidebar" class="sidebar" [ngClass]="{ 'sidebar-transparent': this.pageSidebarTransparent}"&gt;
+  &lt;!-- begin sidebar scrollbar --&gt;
+  &lt;div slimScroll [options]="slimScrollOptions" class="height-full"&gt;
+    &lt;!-- begin sidebar user --&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="nav-profile" [ngClass]="{ 'active' : (navProfileState == 'expand') }"&gt;
+        &lt;a href="javascript:;" (click)="toggleNavProfile()"&gt;
+          &lt;div class="cover with-shadow"&gt;&lt;/div&gt;
+          &lt;div class="image"&gt;
+            &lt;img src="/assets/img/user/user-13.jpg" alt="" /&gt;
+          &lt;/div&gt;
+          &lt;div class="info"&gt;
+            &lt;b class="caret pull-right"&gt;&lt;/b&gt;
+            Sean Ngu
+            &lt;small&gt;Front end developer&lt;/small&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li [@expandCollapse]="navProfileState"&gt;
+        &lt;ul class="nav nav-profile d-block"&gt;
+          ...
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- end sidebar user --&gt;
+    &lt;!-- begin sidebar nav --&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="nav-header"&gt;Navigation&lt;/li&gt;
+
+      &lt;!-- render menu item --&gt;
+      &lt;ng-template #sidebarMenu let-menu="menu"&gt;
+        &lt;span class="badge pull-right" *ngIf="menu.badge"&gt;{{ menu.badge }}&lt;/span&gt;
+        &lt;b class="caret" *ngIf="menu.caret"&gt;&lt;/b&gt;
+        &lt;div class="icon-img" *ngIf="menu.img"&gt;&lt;img src="{{ menu.img }}" /&gt;&lt;/div&gt;
+        &lt;i class="{{ menu.icon }}" *ngIf="menu.icon"&gt;&lt;/i&gt;
+        &lt;span *ngIf="menu.title"&gt;
+          {{ menu.title }}
+          &lt;span class="label label-theme m-l-5" *ngIf="menu.label"&gt;{{ menu.label }}&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/ng-template&gt;
+
+      &lt;!-- render submenu item --&gt;
+      &lt;ng-template #sidebarSubMenu let-menu="menu"&gt;
+        &lt;b class="caret pull-right" *ngIf="menu.caret"&gt;&lt;/b&gt;
+        {{ menu.title }}
+        &lt;i class="fa fa-paper-plane text-theme m-l-5" *ngIf="menu.highlight"&gt;&lt;/i&gt;
+      &lt;/ng-template&gt;
+
+      &lt;!-- sidebar menu --&gt;
+      &lt;ng-container *ngFor="let menu of menus"&gt;
+        &lt;li routerLinkActive="active" #rla1="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': (menu.state == 'expand') }"&gt;
+          &lt;a *ngIf="!menu.url" (click)="(menu.submenu) ? expandCollapseSubmenu(menu, menus, rla1) : ''"&gt;
+            &lt;ng-container *ngTemplateOutlet="sidebarMenu; context: {menu: menu}"&gt;&lt;/ng-container&gt;
+          &lt;/a&gt;
+          &lt;a *ngIf="menu.url" [routerLink]="menu.url"&gt;
+            &lt;ng-container *ngTemplateOutlet="sidebarMenu; context: {menu: menu}"&gt;&lt;/ng-container&gt;
+          &lt;/a&gt;
+
+          &lt;!-- sidebar submenu lvl-1 --&gt;
+          &lt;div [@expandCollapse]="(menu.state) ? menu.state : ((rla1.isActive && !menu.state) ? 'active' : 'collapse')" *ngIf="menu.submenu"&gt;
+            &lt;ul class="sub-menu"&gt;
+              &lt;ng-container *ngFor="let sub1 of menu.submenu"&gt;
+                &lt;li routerLinkActive="active" #rla2="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': (sub1.state == 'expand') }"&gt;
+                  &lt;a *ngIf="!sub1.url" (click)="(sub1.submenu) ? expandCollapseSubmenu(sub1, menu, rla2) : ''"&gt;
+                    &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub1}"&gt;&lt;/ng-container&gt;
+                  &lt;/a&gt;
+                  &lt;a *ngIf="sub1.url" [routerLink]="sub1.url"&gt;
+                    &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub1}"&gt;&lt;/ng-container&gt;
+                  &lt;/a&gt;
+
+                  &lt;!-- sidebar submenu lvl-2 --&gt;
+                  &lt;div [@expandCollapse]="(sub1.state) ? sub1.state : ((rla2.isActive && !sub1.state) ? 'active' : 'collapse')" *ngIf="sub1.submenu"&gt;
+                    &lt;ul class="sub-menu"&gt;
+                      &lt;ng-container *ngFor="let sub2 of sub1.submenu"&gt;
+                        &lt;li routerLinkActive="active" #rla3="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': (sub2.state == 'expand') }"&gt;
+                          &lt;a *ngIf="!sub2.url" (click)="(sub2.submenu) ? expandCollapseSubmenu(sub2, sub1.submenu, rla3) : ''"&gt;
+                            &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub2}"&gt;&lt;/ng-container&gt;
+                          &lt;/a&gt;
+                          &lt;a *ngIf="sub2.url" [routerLink]="sub2.url" (click)="(sub2.submenu) ? expandCollapseSubmenu(sub2, sub1.submenu, rla3) : ''"&gt;
+                            &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub2}"&gt;&lt;/ng-container&gt;
+                          &lt;/a&gt;
+
+                          &lt;!-- sidebar submenu lvl-3 --&gt;
+                          &lt;div [@expandCollapse]="(sub2.state) ? sub2.state : ((rla3.isActive && !sub2.state) ? 'active' : 'collapse')" *ngIf="sub2.submenu"&gt;
+                            &lt;ul class="sub-menu"&gt;
+                              &lt;ng-container *ngFor="let sub3 of sub2.submenu"&gt;
+                                &lt;li routerLinkActive="active" #rla4="routerLinkActive" [routerLinkActiveOptions]="{exact: true}" [ngClass]="{ 'expand': (sub3.state == 'expand') }"&gt;
+                                  &lt;a *ngIf="!sub3.url" (click)="(sub3.submenu) ? expandCollapseSubmenu(sub3, sub2.submenu, rla4) : ''"&gt;
+                                    &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub3}"&gt;&lt;/ng-container&gt;
+                                  &lt;/a&gt;
+                                  &lt;a *ngIf="sub3.url" [routerLink]="sub3.url"&gt;
+                                    &lt;ng-container *ngTemplateOutlet="sidebarSubMenu; context: {menu: sub3}"&gt;&lt;/ng-container&gt;
+                                  &lt;/a&gt;
+                                &lt;/li&gt;
+                              &lt;/ng-container&gt;
+                            &lt;/ul&gt;
+                          &lt;/div&gt;
+                        &lt;/li&gt;
+                      &lt;/ng-container&gt;
+                    &lt;/ul&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+              &lt;/ng-container&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+        &lt;/li&gt;
+      &lt;/ng-container&gt;
+
+      &lt;!-- begin sidebar minify button --&gt;
+      &lt;li&gt;&lt;a href="javascript:;" class="sidebar-minify-btn" (click)="toggleMinified()"&gt;&lt;i class="fa fa-angle-double-left"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;!-- end sidebar minify button --&gt;
+    &lt;/ul&gt;
+    &lt;!-- end sidebar nav --&gt;
+  &lt;/div&gt;
+  &lt;!-- end sidebar scrollbar --&gt;
+&lt;/div&gt;
+&lt;div class="sidebar-bg"&gt;&lt;/div&gt;
+&lt;!-- end #sidebar --&gt;
+
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-content"><strong>H) Page Content</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Page content consists of page title, breadcrumbs and page's main body. HTML code of Content container as shown below:
+						</p>
+<pre class="prettyprint linenums">
+&lt;div id="content" class="content" [ngClass]="{
+'content-full-width': pageSettings.pageContentFullWidth,
+'content-inverse-mode': pageSettings.pageContentInverseMode,
+'p-0 m-0': pageSettings.pageEmpty
+}"&gt;
+  &lt;router-outlet&gt;&lt;/router-outlet&gt;
+&lt;/div&gt;
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-end"><strong>I) End of Page (Javascript)</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Javascript files loaded in the end of page. This will reduce page load time.
+						</p>
+<pre class="prettyprint linenums">
+  &lt;app-root&gt;
+    &lt;!-- begin #page-loader --&gt;
+    &lt;div id="page-loader" class="fade show"&gt;&lt;span class="spinner"&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;!-- end #page-loader --&gt;
+  &lt;/app-root&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-options"><strong>J) Page Options</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general option for the each case of page options. You may set the option in controller</p>
+						<h4>Option List</h4>
+<pre class="prettyprint linenums">
+import { Component } from '@angular/core';
+import { AppComponent } from '../../../app.component';
+import * as global from '../../../globals';
+
+@Component({
+    selector: 'page-blank',
+    templateUrl: './page-blank.html'
+})
+
+export class PageBlank {
+	global = global;
+
+  constructor(private app: AppComponent) {
+      app.setPageSettings({
+        pageSidebarMinified: false,
+        pageContentFullHeight: false,
+        pageContentFullWidth: false,
+        pageContentInverseMode: false,
+        pageWithFooter: false,
+        pageWithoutSidebar: false,
+        pageSidebarRight: false,
+        pageSidebarRightCollapsed: false,
+        pageSidebarTwo: false,
+        pageSidebarWide: false,
+        pageSidebarTransparent: false,
+        pageSidebarLight: false,
+        pageTopMenu: false,
+        pageEmpty: false,
+        pageBodyWhite: false
+      });
+  }
+}
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="page-less"><strong>K) Using LESS</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>Here is the general LESS structure for the Color Admin.</p>
+						<h4>Required Files</h4>
+<pre class="prettyprint linenums">
+  &lt;link href="../assets/less/default/styles.less" rel="stylesheet/less" type="text/css" /&gt;
+  &lt;script src="../assets/plugins/less/less.min.js" type="text/javascript"&gt;&lt;/script&gt;
+</pre>
+						<h4>Less file structure</h4>
+						<p><code>_page_option_list.less</code>, <code>_page_structure_list.less</code>, <code>_component_list.less</code>, <code>_widget_list.less</code>, <code>_plugin_list.less</code>, <code>_page_list.less</code> used to include all the required less files.</p>
+
+<pre class="prettyprint linenums">
+assets/less/default/
+├── styles.less
+├── _component_list.less
+├── _content_flat_black.less
+├── _helper.less
+├── _mixin.less
+├── _page_list.less
+├── _page_option_list.less
+├── _page_structure_list.less
+├── _plugin_list.less
+├── _responsive.less
+├── _variable.less
+├── _widget_list.less
+├── components/
+├── images/
+├── page-option/
+├── page-structure/
+├── pages/
+├── plugins/
+├── theme/
+└── widget/
+</pre>
+					</div><!-- end span12 -->
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="npm-package"><strong>L) NPM Package</strong> - <a href="#top">top</a></h3>
+						</div>
+						<p>
+							Below is the list of package that has been installed in this project. You may use the following example to find the package from their official website.
+							<code>https://www.npmjs.com/package/</code><code>@ng-bootstrap/ng-bootstrap</code>
+						</p>
+<pre class="prettyprint linenums">
+{
+  "name": "color-admin",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build --prod",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e"
+  },
+  "private": true,
+  "dependencies": {
+    "@agm/core": "^1.0.0-beta.2",
+    "@angular/animations": "^5.2.0",
+    "@angular/common": "^5.2.0",
+    "@angular/compiler": "^5.2.0",
+    "@angular/core": "^5.2.0",
+    "@angular/forms": "^5.2.0",
+    "@angular/http": "^5.2.0",
+    "@angular/platform-browser": "^5.2.0",
+    "@angular/platform-browser-dynamic": "^5.2.0",
+    "@angular/router": "^5.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^1.0.0",
+    "@swimlane/ngx-charts": "^7.0.1",
+    "@swimlane/ngx-datatable": "^11.1.7",
+    "angular-calendar": "^0.23.3",
+    "angular2-fullcalendar": "^1.0.19",
+    "bootstrap-social": "^5.1.1",
+    "chart.js": "^2.7.1",
+    "core-js": "^2.4.1",
+    "flag-icon-css": "^2.9.0",
+    "ng-fullcalendar": "^1.4.6",
+    "ng2-nvd3": "^2.0.0",
+    "ng2-slim-loading-bar": "^4.0.0",
+    "ng4-charts": "^1.0.2",
+    "ngx-countdown": "^2.0.4",
+    "ngx-highlight-js": "^1.0.3",
+    "ngx-slimscroll": "^3.6.1",
+    "ngx-tags-input": "^1.1.1",
+    "ngx-trend": "^3.1.0",
+    "rxjs": "^5.5.6",
+    "simple-line-icons": "^2.4.1",
+    "sweetalert2": "^7.11.0",
+    "zone.js": "^0.8.19"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.8",
+    "@angular/compiler-cli": "^5.2.0",
+    "@angular/language-service": "^5.2.0",
+    "@types/jasmine": "~2.8.3",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~6.0.60",
+    "codelyzer": "^4.0.1",
+    "jasmine-core": "~2.8.0",
+    "jasmine-spec-reporter": "~4.2.1",
+    "karma": "~2.0.0",
+    "karma-chrome-launcher": "~2.2.0",
+    "karma-coverage-istanbul-reporter": "^1.2.1",
+    "karma-jasmine": "~1.1.0",
+    "karma-jasmine-html-reporter": "^0.2.2",
+    "protractor": "~5.1.2",
+    "ts-node": "~4.1.0",
+    "tslint": "~5.9.1",
+    "typescript": "~2.5.3"
+  }
+}
+</pre>
+					</div>
+				</div><!-- end row-fluid -->
+				<div class="row-fluid">
+					<div class="span12">
+						<div class="page-header">
+							<h3 id="change-log"><strong>M) Change Log</strong> - <a href="#top">top</a></h3>
+						</div>
+						<h5>Version 4.0.0 - 01 March 2018</h5>
+						<ul>
+                            <li>
+                                NEW: Transparent Design
+                                <ul>
+                                    <li>Added files: <code>template_transparent</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Angular Laravel Version
+                                <ul>
+                                    <li>Added files: <code>template_laravel</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Angular JS 5 Version
+                                <ul>
+                                    <li>Added files: <code>template_angularjs5</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Profile Page
+                                <ul>
+                                    <li>Updated HTML files: <code>extra_profile.html</code></li>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Email Inbox Page
+                                <ul>
+                                    <li>Updated HTML files: <code>email_inbox.html</code></li>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Email Detail Page
+                                <ul>
+                                    <li>Updated HTML files: <code>email_detail.html</code></li>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Email Compose Page
+                                <ul>
+                                    <li>Updated HTML files: <code>email_compose.html</code></li>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: jQuery Smart Wizard
+                                <ul>
+                                    <li>Updated HTML files: <code>form_wizards.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/jquery-smart-wizard/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Highlight JS
+                                <ul>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/highlight/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Minified Submenu Support for Fixed Sidebar
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap 3 & 4 Support
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: LESS Support for Apple & Transparent Design
+                                <ul>
+                                    <li>Added Files: <code>/assets/less/apple</code></li>
+                                    <li>Added Files: <code>/assets/less/transparent</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Overall UI Enhancement
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Standardize File structure
+                                <ul>
+                                    <li>Modified Path: <code>/assets</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Ajax Version
+                                <ul>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jQuery 3.x
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/jquery/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 4.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: FontAwesome 5.0 
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: DataTables 1.10.10
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/DataTables/</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 3.0.0 - 23 July 2017</h5>
+						<ul>
+                            <li>
+                                NEW: Apple Design
+                                <ul>
+                                    <li>Added files: <code>template_content_apple</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Angular JS 4
+                                <ul>
+                                    <li>Added files: <code>template_content_angularjs4</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Boostrap 4 Support
+                                <ul>
+                                    <li>Added HTML files: <code>bootstrap_4.html</code></li>
+                                    <li>Added CSS files: <code>/assets/css/style-bs4.css</code></li>
+                                    <li>Added CSS files: <code>/assets/css/style-bs4.min.css</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap4/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: CSS Checkbox & Radiobutton
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: clipboard.js
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/clipboard/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap SweetAlert.js
+                                <ul>
+                                    <li>Updated HTML files: <code>ui_modal_notification.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-sweetalert/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Angular JS Mobile Sidebar AutoClose
+                                <ul>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Angular JS 4 Mobile Sidebar AutoClose
+                                <ul>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Ajax Version Mobile Sidebar AutoClose
+                                <ul>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Add listener after panel reposition
+                                <ul>
+                                    <li>Modified File: <code>apps.js</code></li>
+                                    <li>Modified File: <code>apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCE: Form Plugins UI Enhancement
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Sidebar Transparent Overflow Issue
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE8 Datetimcpicker
+                                <ul>
+                                    <li>Modified File: <code>form-plugins.demo.js</code></li>
+                                    <li>Modified File: <code>form-plugins.demo.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Login v1 Overflow Issue
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 2.2.0 - 04 January 2017</h5>
+						<ul>
+                            <li>
+                                FIX: Downloaded File Unable to Extract
+                                <ul>
+                                    <li>Removed File: <code>template_content_angularjs2/node_modules</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 2.1.0 - 30 November 2016</h5>
+						<ul>
+                            <li>
+                                NEW: Angular JS 2
+                                <ul>
+                                    <li>Added files: <code>template_content_angularjs2</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: LESS File for Material Design
+                                <ul>
+                                    <li>Added files: <code>template_content_material/assets/less/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap Color Palette
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-colorpalette/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap Social
+                                <ul>
+                                    <li>Added HTML files: <code>ui_social_buttons.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-social/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Intro JS
+                                <ul>
+                                    <li>Added HTML files: <code>ui_tour.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/introjs/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: jQuery Simple Color Picker
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/jquery-simplecolorpicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap Show Password
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-show-password/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Dropzone
+                                <ul>
+                                    <li>Added HTML files: <code>form_dropzone.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/dropzone/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Summernote
+                                <ul>
+                                    <li>Added HTML files: <code>form_summernote.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/summernote/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.7 
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Font Awesome 4.7.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Colorpicker 2.3.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-colorpicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Combobox 1.1.7
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-combobox/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Datepicker 1.6.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-datepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Daterangepicker 2.1.24
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-daterangepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Datetimepicker
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-datetimepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Eonasdan Datetimepicker 4.17.37
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-eonasdan-datetimepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap Tags Input 0.8.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap-tagsinput/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap XEditable 1.5.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap3-editable/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                DROP: Bootstrap WYSIHTML5 and replaced with WYSIHTML5 Bootstrap3
+                                <ul>
+                                    <li>New Directory: <code>/assets/plugins/bootstrap-wysihtml5/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Chart JS 2.0.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/chart-js/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Flag Icon 2.4.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/flag-icon/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Flot Chart 0.8.3
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/flot/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Fullcalendar 2.9.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/fullcalendar/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Ionicon 2.0.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/ionicon/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Ion Range Slider 2.1.4
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/ionRangeSlider/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jQuery File Upload
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/jquery-file-upload/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jVector Map 2.0.3
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/jquery-jvectormap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jQuery Countdown 2.0.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/jquery.countdown/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jsTree 3.3.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/jstree/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: LESS 2.7.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/less/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Lightbox 2.8.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/lightbox/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Masked Input 1.4.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/masked-input/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Morris Chart 0.5.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/morris/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: NVD3 1.8.4
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/nvd3/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Parsley 2.4.4
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/parsley/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Simple Line Icons 2.3.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/simple-line-icons/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Slimscroll 1.3.8
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/slimscroll/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Material Version Inverse Header
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Table Manage Combination PDF button not working
+                                <ul>
+                                    <li>Modified File: <code>table_manage_combine.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Material Version icons rendering problem in mobile device
+                                <ul>
+                                    <li>Modified File: <code>table_manage_combine.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Missing Profile / Invoice / Calendar page styling for LESS 
+                                <ul>
+                                    <li>Modified File: <code>/assets/less/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Login V1 / V2 styling overflow
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCEMENT: Minor UI Enhancement
+                                <ul>
+                                    <li>Modified File: <code>style.css</code></li>
+                                    <li>Modified File: <code>style.min.css</code></li>
+                                </ul>
+                            </li>
+						</ul>
+						<h5>Version 2.0.0 - 30 April 2016</h5>
+						<ul>
+                            <li>
+                                NEW: Material Design Version
+                                <ul>
+                                    <li>Added files: <code>template_content_material</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.6 
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: FontAwesome 4.6.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Angular Js  1.5.5 (stable version)
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/angularjs/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Fullcalendar 2.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/fullcalendar/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: DataTable 1.10.10
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/fullcalendar/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Angular Version Panel Dragging Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/js/apps.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Angular Version Page Height Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/css/style.css</code></li>
+                                    <li>Modified File: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Select 2 Overflow Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/css/style.css</code></li>
+                                    <li>Modified File: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: DataTables Buttons Extension Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/plugins/DataTables/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Full Height Page Panel Expand Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/css/style.css</code></li>
+                                    <li>Modified File: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Slider & Switchery Options
+                                <ul>
+                                    <li>Modified File: <code>/assets/js/form-slider-switcher.demo.js</code></li>
+                                    <li>Modified File: <code>/assets/js/form-slider-switcher.demo.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Page Loader z-index Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/js/form-slider-switcher.demo.js</code></li>
+                                    <li>Modified File: <code>/assets/js/form-slider-switcher.demo.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Spinner Margin Issue
+                                <ul>
+                                    <li>Modified File: <code>/assets/css/style.css</code></li>
+                                    <li>Modified File: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.9.0 - 05 October 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Angular JS Version
+                                <ul>
+                                    <li>Added files: <code>template_content_angularjs</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: NVD3 Chart
+                                <ul>
+                                    <li>Added HTML files: <code>chart_d3.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/nvd3/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Top Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_top_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Boxed Layout
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_boxed_layout.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Mixed Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_mixed_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Boxed Layout with Mixed Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_boxed_layout_with_mixed_menu.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Transparent Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_transparent_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Extension - RowReorder
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_rowreorder.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Extension - Select
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_select.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: DataTables Version - 1.10.9
+                                <ul>
+                                    <li>Updated Plugins files: <code>/assets/DataTables</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                ENHANCED: Color Admin Apps.js
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.8.0 - 30 June 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Bootstrap Date Time Picker
+                                <ul>
+                                    <li>Modified HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-eonasdan-datetimepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Full Color Panel
+                                <ul>
+                                    <li>Modified HTML files: <code>ui_widget_boxes.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Login Page v2 Background in Large Screen (> 1920px)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Page Sidebar Expand / Collapse Height Rendering
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Page Sidebar Scrollbar Touch Event in Tablet Device
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified JS files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Clearfix Mixin Crashed with Bootstrap Mixin
+                                <ul>
+                                    <li>Updated File: <code>/assets/less/_mixins.less</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Include Bootstrap LESS 
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/less/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.4 to Bootstrap 3.3.5
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Less 1.7.4 to Less 2.5.1
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/less/</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.7.0 - 1 May 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Tree View
+                                <ul>
+                                    <li>Added HTML files: <code>ui_tree.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/jstree/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Language Bar & Icon List
+                                <ul>
+                                    <li>Added HTML files: <code>ui_language_bar_icon.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/flag-icon/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Bootstrap Date Range Picker
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/bootstrap-daterangepicker/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Select2
+                                <ul>
+                                    <li>Updated HTML files: <code>form_plugins.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/select2/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Top Navbar Mega Menu
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_mega_menu.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Login & Register Page v3
+                                <ul>
+                                    <li>Added HTML files: <code>login_v3.html</code></li>
+                                    <li>Added HTML files: <code>register_v3.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Profile Page
+                                <ul>
+                                    <li>Added HTML files: <code>extra_profile.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Light Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_light_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Wide Sidebar
+                                <ul>
+                                    <li>Added HTML files: <code>page_with_wide_sidebar.html</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Mobile View Scrollbar
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/css/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Mobile View Minified Sidebar Scrollbar
+                                <ul>
+                                    <li>Modified JS files: <code>/assets/js/apps.js</code> and <code>/assets/css/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.3 to Bootstrap 3.3.4
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Multi Level Menu Bugfix
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code> and <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Ajax Version Coming Soon Page
+                                <ul>
+                                    <li>Modified HTML files: <code>/assets/js/coming-soon.demo.js</code> and <code>/assets/js/coming-soon.demo.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Ajax Version href="#" rendering error
+                                <ul>
+                                    <li>Modified HTML files: <code>/assets/js/apps.js</code> and <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.6.0 - 23 January 2015</h5>
+						<ul>
+                            <li>
+                                NEW: Managed Table - Extension Combination
+                                <ul>
+                                    <li>Added HTML: <code>table_mange_combine.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Chart JS
+                                <ul>
+                                    <li>Added HTML: <code>chart_js.html</code></li>
+                                    <li>Added PLUGINS: <code>assets/plugins/assets/chart-js/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Ajax Documentation
+                                <ul>
+                                    <li>Updated Directory: <code>documentation/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.3.1 to Bootstrap 3.3.2
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/bootstrap/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: FontAwesome 4.2.0 to Bootstrap 4.3.0
+                                <ul>
+                                    <li>Updated Directory: <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE 8 - IE 10 Full Height Page
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Sidebar Toggle Button
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Tab Inverse Hover
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE10 Sidebar Menu
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Minified Sidebar Multiple Level Menu
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+						</ul>
+						<h5>Version 1.5.0 - 30 November 2014</h5>
+						<ul>
+                            <li>
+                                NEW: AJAX Version
+                                <ul>
+                                    <li>New Directory files: <code>/template_content_ajax</code></li>
+                                    <li>New Directory files: <code>/template_content_ajax</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Color Scheme (Black)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar Color Scheme (Gradient)
+                                <ul>
+                                    <li>Modified CSS files: <code>/assets/css/theme/default.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/blue.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/red.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/orange.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/purple.css</code></li>
+                                    <li>Modified CSS files: <code>/assets/css/theme/black.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Local Storage Panel Position
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/js/apps.js</code></li>
+                                    <li>Modified Directory files: <code>/assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Ionicons
+                                <ul>
+                                    <li>Added HTML files: <code>ui_ionicons.html</code></li>
+                                    <li>Added HTML files: <code>page_with_ionicons.html</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/ionicons/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: DataTables Plugins
+                                <ul>
+                                    <li>Added HTML files: <code>table_manage_autofill.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_colreorder.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_colvis.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_fixed_columns.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_fixed_header.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_keytable.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_responsive.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_scroller.html</code></li>
+                                    <li>Added HTML files: <code>table_manage_tabletools.html</code></li>
+                                    <li>Updated PLUGINS files: <code>/assets/plugins/DataTables/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Pace Loader Plugins
+                                <ul>
+                                    <li>Modified HTML files: <code>all html files</code></li>
+                                    <li>Added PLUGINS files: <code>/assets/plugins/pace/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Bootstrap 3.2.0 to Bootstrap 3.3.1
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/bootstrap-3.2.0/</code> to <code>/assets/plugins/bootstrap/</code></li>
+                                    <li>Modified CSS Files: <code>/assets/plugins/bootstrap/css/bootstrap.min.js</code></li>
+                                    <li>Modified JS Files: <code>/assets/plugins/bootstrap/js/bootstrap.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: jQuery 1.8.2 to jQuery 1.9.1
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/jquery-1.8.1/</code> to <code>/assets/plugins/jquery</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-1.9.1.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-1.9.1.min.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-migrate-1.1.0.js</code></li>
+                                    <li>Added JS Files: <code>/assets/plugins/jquery/jquery-migrate-1.1.0.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                MODIFY: FontAwesome Directory
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/plugins/font-awesome-4.2.0/</code> to <code>/assets/plugins/font-awesome/</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: IE8 Font Rendering Issue
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Google Chrome Fixed Element Rendering Issue
+                                <ul>
+                                    <li>Modified Directory files: <code>/assets/css/style.css</code></li>
+                                    <li>Modified Directory files: <code>/assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.4.0 - 17 September 2014</h5>
+						<ul>
+						    <li>
+						        NEW: Front end one page parallax page Added
+						        <ul>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index_inverse_header.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/index_default_header.html</code></li>
+						            <li>Added HTML files: <code>/frontend/one-page-parallax/extra-element.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Inbox v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_inbox_v2.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Compose v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_compose.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+                                NEW: Email Detail v2 page Added
+						        <ul>
+						            <li>Added HTML files: <code>email_detail.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        NEW: LESS file Added
+						        <ul>
+						            <li>Added LESS files: <code>assets/less</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        NEW: Added Meta Setting to Disable Mobile Zooming
+						        <ul>
+						            <li>Modified HTML files: <code>ALL</code></li>
+						        </ul>
+						    </li>
+                            <li>
+                                FIX: Accordion Styling Overflow
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Slimscroll Scrolling Speed
+						        <ul>
+						            <li>Modified js files: <code>assets/js/apps.js</code></li>
+						            <li>Modified js files: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                FIX: Mobile Sidebar Click Event
+						        <ul>
+						            <li>Modified js files: <code>assets/js/apps.js</code></li>
+						            <li>Modified js files: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+						<h5>Version 1.3.0 - 30 August 2014</h5>
+						<ul>
+                            <li>
+                                NEW: Dashboard v2 Page
+						        <ul>
+						            <li>Added new html files: <code>dashboard_v2.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Simple Line Icons Page
+						        <ul>
+						            <li>Added new html files: <code>ui_simple_line_icons.html</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/simple-line-icons</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Morris Chart Page
+						        <ul>
+						            <li>Added new html files: <code>chart_morris.html</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/morris</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page with Line Icons
+						        <ul>
+						            <li>Added new html files: <code>page_with_line_icons.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Full Height Content Page
+						        <ul>
+						            <li>Added new html files: <code>page_full_height.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: CSS Helper Page
+						        <ul>
+						            <li>Added new html files: <code>helper_css.html</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Gallery v2 Page
+						        <ul>
+						            <li>Added new html files: <code>gallery_v2.html</code></li>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.css</code></li>
+						            <li>Modified css files: <code>assets/css/style-responsive.min.css</code></li>
+						            <li>Added new plugins files: <code>assets/plugins/superbox</code></li>
+                                </ul>
+                            </li>
+						    <li>
+						        UPDATE: FontAwesome from 4.1.0 to 4.2.0</code>
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        CHANGE: <code>chart.html</code> to <code>flot-chart.html</code>
+						    </li>
+						    <li>
+						        CHANGE: <code>.widget-states</code> to <code>.widget-stats</code>
+						        <ul>
+						            <li>Modified css files: <code>assets/css/style.css</code></li>
+						            <li>Modified css files: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Typo on Sidebar Link Url
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Minified Sidebar on Tablet
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+					    </ul>
+						<h5>Version 1.2.0 - 15 June 2014</h5>
+						<ul>
+						    <li>
+						        NEW: 5 Color Theme
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/default.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/blue.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/red.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/orange.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/purple.html</code></li>
+                                    <li>Added new css file: <code>assets/css/theme/black.html</code></li>
+                                    <li>Added new css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Inverse & Default Top Navigation Theme
+                                <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar Grid Layout Option
+                                <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Theme Panel
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Sidebar & Header Default & Fixed Option
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Page With Two Sidebar
+                                <ul>
+						            <li>Added new html files: <code>page_with_two_sidebar.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Login V2
+                                <ul>
+						            <li>Added new html files: <code>login_v2.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: X-Editable
+                                <ul>
+						            <li>Added new html files: <code>form_editable.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Multiple File Upload
+                                <ul>
+						            <li>Added new html files: <code>form_multiple_upload.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Form Slider + Switcher Page
+						        <ul>
+						            <li>Added new html files: <code>form_slider_switcher.html</code></li>
+                                    <li>Added new plugins file: <code>assets/plugins/switchery</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                NEW: Wizards + Validation Page
+						        <ul>
+						            <li>Added new html files: <code>form_wizards_validation.html</code></li>
+                                    <li>Updated plugins file: <code>assets/plugins/parsley</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UPDATE: Plugins Parsley 2.0 
+						        <ul>
+						            <li>Updated html files: <code>form_wizards.html</code></li>
+                                    <li>Updated plugins file: <code>assets/plugins/parsley</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                UI: Dashboard widget state & line chart improvement
+                                <ul>
+						            <li>Modified html files: <code>index.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+                            </li>
+						    <li>
+						        FIX: Mobile Top Navigation Fixed Top
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mobile Sidebar Fixed Right Position
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Panel Remove Action Tooltip
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mozilla Firefox Sidebar Minimized
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar DOM Element Didn't Functioning 
+						        <ul>
+                                    <li>Modified js file: <code>assets/js/apps.js</code></li>
+                                    <li>Modified js file: <code>assets/js/apps.min.js</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar Uncollapsed Sub Menu After Minify
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Old Browser Transparent Background Styling Support 
+						        <ul>
+						            <li>Added new folder: <code>assets/img/transparent/</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						</ul>
+						<p>&nbsp;</p>
+						<h5>Version 1.1.0 – 30 May 2014</h5>
+						<ul>
+						    <li>
+						        NEW: Email Template
+						        <ul>
+                                    <li>Added new html file: <code>email_system.html</code></li>
+                                    <li>Added new html file: <code>email_newsletter.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        NEW: Timeline Page
+						        <ul>
+                                    <li>Added new html file: <code>extra_timeline.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        NEW: Coming Soon Page
+						        <ul>
+                                    <li>Added new html file: <code>extra_coming_soon.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+                                </ul>
+						    </li>
+						    <li>
+						        FIX: Sidebar Sub Menu Caret Styling
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Modal Backdrop Opacity
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Login form in mobile landscape view 
+						        <ul>
+                                    <li>Modified css file: <code>assets/css/style.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Mobile View Search Box in header
+						        <ul>
+						            <li>Modified html files: <code>all html files</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Icon page broken on mobile
+						        <ul>
+                                    <li>Modified file: <code>ui_icons.html</code></li>
+						        </ul>
+						    </li>
+						    <li>
+						        FIX: Dashboard Tab Panel on mobile
+						        <ul>
+						            <li>Modified html files: <code>index.html</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.css</code></li>
+                                    <li>Modified css file: <code>assets/css/style-responsive.min.css</code></li>
+						        </ul>
+						    </li>
+						</ul>
+					</div>
+			    </div><!-- end row-fluid -->
+			</div><!-- end span12 -->
+		</div><!-- end row-fluid -->
+	</div><!-- end container -->
+	
+	<footer class="footer">
+		<div class="container text-left">
+			<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes, you might consider visiting the forums and asking your question via <a href="mailTo:nguoksiong@live.co.uk">email</a>.</p> 
+			<br />
+			<p class="append-bottom alt large"><strong>Sean Ngu</strong></p>
+			<p><a href="#top">Go To Table of Contents</a></p>
+		</div>
+	</footer><!-- end footer -->
+	
+	<script src="assets/bootstrap/js/jquery.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-button.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-typeahead.js"></script>
+    <script src="assets/bootstrap/js/bootstrap-affix.js"></script>
+
+    <script src="assets/bootstrap/js/holder/holder.js"></script>
+    <script src="assets/bootstrap/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/bootstrap/js/application.js"></script>
+</body>
+</html>
