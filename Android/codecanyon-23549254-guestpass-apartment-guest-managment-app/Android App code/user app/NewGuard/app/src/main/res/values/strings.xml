@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">guestpass</string>
+    <string name="text1">Please enter your mobile number &amp; pin</string>
+    <string name="text2">If you dont have login details please click on</string>
+    <string name="text3">sign up button and enroll yourself.</string>
+    <string name="text4">New User?</string>
+    <string name="text5">Signup</string>
+    <string name="stext">I Accept Terms and Conditions Privacy &amp; Policy.</string>
+    <string name="stext2">SIGNUP</string>
+    <string name="stext3">Already have an Account?</string>
+    <string name="stext1">Login</string>
+    <string name="drtext">Property Code</string>
+    <string name="drtext1">Prasad Pawar</string>
+    <string name="drtext2">(Flat No. 15)</string>
+    <string name="drtext3">Sai Apartment</string>
+    <string name="drtext4">Project By:</string>
+    <string name="drtext5">Wunderkinds Technologies &amp; System [P] Ltd.</string>
+    <string name="drtext6">02562-274404</string>
+    <string name="drtext7">Property Code :</string>
+    <string name="dtext1">Help</string>
+    <string name="dtext2">About Us</string>
+    <string name="dtext3">Logout</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="htext">If you have any queries regarding this</string>
+    <string name="htext1">GUESTPASS App please</string>
+    <string name="htext2">contact to admin</string>
+    <string name="htext3">Prasad Pawar</string>
+    <string name="htext4">Sai Apartment</string>
+    <string name="htext5">+919999999999</string>
+    <string name="htext6">Call Now</string>
+
+    <string name="atext">If you have any queries regarding this</string>
+    <string name="atext1">GUESTPASS App please</string>
+    <string name="atext2">contact to admin</string>
+    <string name="atext3">If you have any queries regarding this</string>
+    <string name="atext4">GUESTPASS App please</string>
+    <string name="atext5">contact to admin</string>
+    <string name="atext6">Back</string>
+
+    <string name="shareqrtxt">Share this QR code or send text to invite guest</string>
+    <string name="validitycode">( code valid for next 24 hours. ) </string>
+</resources>

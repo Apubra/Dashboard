@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homepage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wk.guestpass.app.Activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient1" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:navigationContentDescription="0dp"
+            android:layout_height="45dp"
+            app:theme="@style/MyActionBarTheme" />
+
+
+        <RelativeLayout
+            android:id="@+id/layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="70dp"
+                android:layout_marginLeft="60dp"
+                android:src="@drawable/logo" />
+
+            <android.support.v7.widget.SearchView
+                style="@style/Searchview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/searchview"
+                android:visibility="gone"
+                android:layout_toLeftOf="@+id/logout"
+                android:layout_marginRight="5sp"
+                android:layout_centerVertical="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_search"
+                app:searchIcon="@drawable/ic_search" />
+
+            <ImageView
+                android:id="@+id/logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/ic_power" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/logout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/layout1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <ImageView
+                android:id="@+id/nodaata"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:padding="70sp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/nodatahome"
+                android:visibility="gone" />
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swipeToRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainheader">
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/homelistrecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="172dp" />
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/bottombtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="40dp"
+            android:backgroundTint="#31cca5"
+            android:src="@drawable/ic_add_black_24dp"
+            app:borderWidth="0dp"
+            app:fabSize="auto" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blacktransparent"
+        android:visibility="gone"
+        android:clickable="false"
+        android:id="@+id/overmain">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="2" />
+
+        <!--  <pl.droidsonroids.gif.GifImageView
+              android:id="@+id/gifImageView"
+              android:layout_centerVertical="true"
+              android:layout_centerHorizontal="true"
+              android:visibility="visible"
+              android:src="@drawable/triangles"
+              android:layout_width="180sp"
+              android:layout_height="180sp"/>
+  -->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/gifImageView"
+            style="@style/SpinKitView.CubeGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgrnd"
+        android:visibility="gone"
+        android:background="@drawable/blacktransparent"/>
+
+</FrameLayout>

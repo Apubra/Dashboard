@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/sadface"
+        android:src="@drawable/noconnection"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/oops"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sadface"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:text="No Connection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/oops"
+        android:id="@+id/notes"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:layout_centerHorizontal="true"
+        android:text="Something Went Wrong\n Please Check Your Network\n &amp;"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/done"
+        android:textColor="#fff"
+        android:layout_below="@+id/notes"
+        android:text="Try Again"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="5sp"
+        android:background="#26a98a"
+        android:layout_width="100dp"
+        android:layout_height="32dp" />
+
+</RelativeLayout>

@@ -1,0 +1,229 @@
+<div class="row">
+                <div class="col-xs-12 col-lg-12 col-xl-8">
+                    <div class="card-box" style="margin-top: 30px; height:410px">
+
+                        <h6 class="header-title m-t-0 m-b-20"><font size="5" color="black">Estate Profile</font><a href="javascript:void(0);" data-toggle="modal" data-target="#Modal_Edit1"><font size="5" ><span class="fa fa-pencil" style="margin:20px"></span></font></a></h6>
+
+
+                        <!--a href="javascript:void(0);" class="btn btn-primary" data-toggle="modal" data-target="#Modal_Edit">Renew</a-->
+
+
+                        <!--div class="text-center">
+                            <ul class="list-inline chart-detail-list m-b-0">
+                                <li class="list-inline-item">
+                                    <h6 style="color: #3db9dc;"></h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <h6 style="color: #1bb99a;"></h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <h6 style="color: #818a91;"></h6>
+                                </li>
+                            </ul>
+                        </div-->
+
+                        <div id="morris-bar-stacked" style="height: 200px">
+                            <!--h2><label style="color:red;background-color: ">User ID</label>     <!?php echo $this->session->userdata('user_id'); ?><br/>
+                                <label style="color:red">User Email ID</label> <!?php echo $this->session->userdata('user_email'); ?><br/>
+                                <label style="color:red">User Name</label> <!?php echo $this->session->userdata('user_name'); ?><br/>
+                                <label style="color:red">User Mobile No.</label> <!?php echo $this->session->userdata('user_mobile'); ?><br/>
+                                <label style="color:red">User Role</label> <!?php echo $this->session->userdata('user_role'); ?>
+
+                                
+                            </h2-->
+                            <?php
+                                $this->db->select('*');
+                                $this->db->where('id', $this->session->userdata('user_id'));
+                                $query1 = $this->db->get('estate_admin');
+                                foreach ($query1->result_array() as $row1) {
+                                $user_id = $row1['id']; 
+                                $user_email = $row1['mail']; 
+                                $user_name = $row1['name'];
+                                $user_mobile = $row1['mob'];
+                                $user_role = $row1['user_role'];
+                                 $status = $row1['status'];
+                                 $descri = $row1['descri'];
+                                 $date = $row1['date'];
+                                }
+                            ?>
+                            <table class="table">
+                                <tbody>
+                                    <tr class="info">
+                                        <th><label style="color:red">Estate SignUp Date</label></th>
+                                        <td><?php echo $date; ?></td>
+            
+                                    </tr>
+                                    <tr class="info">
+                                        <th><label style="color:red">Estate Name</label></th>
+                                        <td><?php echo $user_name; ?></td>
+            
+                                    </tr>
+                                    <tr class="danger">
+                                        <th><label style="color:red">Estate Contact Person</label></th>
+                                        <td><?php echo $user_email; ?></td>
+                                    </tr>
+                                    
+                                    <tr class="warning">
+                                        <th><label style="color:red">Contact Number</label></th>
+                                        <td><?php echo $user_mobile; ?></td>  
+                                        </tr>
+                                    <tr class="warning">
+                                        <th><label style="color:red">Description</label></th>
+                                        <td><?php echo $descri; ?></td>  
+                                    </tr>
+                                    <tr class="warning">
+                                        <th><label style="color:red">Status</label></th>
+                                        <td><?php if($status=='1'){echo 'active';}else{echo 'inactive';}  ?></td> 
+                                         
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            
+
+                        </div>
+
+                    </div>
+                    
+                    <div class="card-box">
+
+                        <h4 class="header-title m-t-0 m-b-30">Top Contracts</h4>
+
+                        <div class="table-responsive">
+                            <table class="table table-bordered mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Company</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th class="text-muted">Apple Technology</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-success">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted">Envato Pty Ltd.</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-danger">Unpaid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="text-muted">Dribbble LLC.</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-success">Paid</span></td>
+                                    </tr>
+                                <tr>
+                                        <th class="text-muted">Adobe Family</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-success">Paid</span></td>
+                                    </tr>
+                                <tr>
+                                        <th class="text-muted">Apple Technology</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-danger">Unpaid</span></td>
+                                    </tr>
+                                <tr>
+                                        <th class="text-muted">Envato Pty Ltd.</th>
+                                        <td>20/02/2014</td>
+                                        <td>19/02/2020</td>
+                                        <td><span class="label label-success">Paid</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div>
+            
+                </div><!-- end col-->
+
+                <div class="col-xs-12 col-lg-12 col-xl-4">
+                    <div class="card-box" style="margin-top: 30px">
+
+                        <h4 class="header-title m-t-0 m-b-30"><font size="5" color="black"> Current Package</font></h4>
+
+                        <!--div class="text-center m-b-20">
+                            <div class="btn-group" role="group" aria-label="Basic example" >
+                                <button type="button" class="btn btn-sm btn-secondary"></button>
+                                <button type="button" class="btn btn-sm btn-secondary"></button>
+                                <button type="button" class="btn btn-sm btn-secondary"></button>
+                            </div>
+                        </div-->
+
+                        <div id="morris-donut-example" style="height: 225px;">
+                            <?php
+                                $this->db->select('*');
+                                $this->db->where('id',$this->session->userdata('user_id'));
+
+                                $query1 = $this->db->get('estate_admin');
+                                foreach ($query1->result_array() as $row1) {
+                                $pack_name = $row1['pack']; 
+                                $pack_date = $row1['date']; 
+                                $expire_date = $row1['expire_date'];
+                                }
+                            ?>
+                            <table class="table">
+                                <tbody>
+                                    <tr class="info">
+                                        <th><label style="color:red">Package Name</label></th>
+                                        <td><?php echo $pack_name; ?></td>
+                                    </tr>
+                                    
+                                    <tr class="warning">
+                                        <th><label style="color:red">Description</label></th>
+                                        <td><?php echo $descri; ?></td>  
+                                    </tr>
+                                    
+                                    <tr class="warning">
+                                        <th><label style="color:red">Expirery Date</label></th>
+                                        <td><?php echo $expire_date; ?></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td>
+                                            <!--form method="POST" action="<!?php  echo base_url(); ?>​Profile/user_profile">
+       <button id="submit-buttons" type="submit" ​​​​​>Submit 1</button-->
+</form>
+                                        <div class="" style="float: right" ><a href="javascript:void(0);" class="btn btn-primary" data-toggle="modal" data-target=""style="width: 150%">Renew</a></div>
+                                        
+                                        
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div>
+                            
+                        <div>
+
+                            
+                        </div>
+
+                        <!--div class="text-center">
+                            <ul class="list-inline chart-detail-list mb-0 m-t-10">
+                                <li class="list-inline-item">
+                                    <h6 style="color: #3db9dc;"></i></h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <h6 style="color: #1bb99a;"></i></h6>
+                                </li>
+                                <li class="list-inline-item">
+                                    <h6 style="color: #818a91;"></i></h6>
+                                </li>
+                            </ul>
+                        </div-->
+
+                    </div>
+                </div><!-- end col-->
+
+
+            </div>
+            <!-- end row -->

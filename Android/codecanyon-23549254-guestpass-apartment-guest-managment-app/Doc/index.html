@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Index</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+	p, table, hr, .box { margin-bottom:25px; }
+	.box p { margin-bottom:10px; }
+</style>
+</head>
+
+
+<body>
+	<div class="container">
+
+		
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;GUESTPASS - Appartment Guest mgmt App
+&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+						Created: WK-DPAK<br>
+						Email: <a href="mailto:vd.aplacampus@gmail.com">vd.aplacampus@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our GUESTPASS - Appartment Guest managment App. If you have any questions that are beyond the scope of this help file, please contact for customization. Thanks!
+				</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Index</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">Database Connection</a></li>
+			<li><a href="#cssFiles">Change base url</a></li>
+			<li><a href="#javascript">Change api link </a></li>
+			<li><a href="#psdFiles">Change about us data</a></li>
+			<li><a href="#credits">Change apps splash screen</a></li>
+			<li><a href="#credits1">Change app launcher icon</a> </li>
+			<li><a href="#credits2">Change logo / icons of app</a> </li>
+          
+
+		</ol>
+		
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>A) Database Connection</strong> - <a href="#toc">top</a></h3>
+		<p>This is very simple to install. Just follow the bellow step and you are ready to go. </p>
+
+		<ul>
+			<li>Create Database and import sql file from sql folder<br><br><br>
+				<img src="assets/images/database.png" alt="HTML Structure" width="900" height="450" />
+				<br><br><br>
+			</li>
+
+			<li>Change Database detail in <b>database.php</b> that is located in<br><b style="color:red;">public_html/application/config/database.php</b></li></ul>
+
+			<p></p> 
+
+			<hr>
+
+			<h3 id="cssFiles"><strong>B) Change base url </strong> - <a href="#toc">top</a></h3>
+
+			<p></p> 
+			<ul>
+
+				<li>Change Base URL  detail in <b>config.php</b> that is located in <br><b style="color:red;">public_html/application/config/config.php</b> (Replace your base_url by $config['base_url'] = 'http://www.domain_name.com';)<br><br><br>
+					<img src="assets/images/cibase.png" alt="HTML Structure" width="900" height="450" />
+				</li></ul>			
+
+				<p></p>  
+
+
+				<hr>
+				<h2 style="color:blue; text-align: left;">Andorid APP Setup (Android Studio)</h2><br>
+				<h3 id="javascript"><strong>C) Change api link </strong> - <a href="#toc">top</a></h3>
+
+				<p></p>
+
+				<ul>
+					<li>replace all your link into<b style="color:red;"> app\src\main\java\com\wk\guestpass\app\Utilities\Config.java</b><br>
+      For example:- public static final String login="http://YOUR URL//api_login?";<br><br>
+
+						<img src="assets/images/api.png" alt="HTML Structure" width="900" height="450" /></li>
+
+				</ol>
+
+
+
+				<hr>
+
+				<h3 id="psdFiles"><strong>D) Change about us data </strong> - <a href="#toc">top</a></h3>
+
+				<p></p>
+
+				<ul>
+					<li>
+
+						Go to following path and change about us content in this app <br>
+   <b style="color:red;"> \app\src\main\res\values\strings.xml</b><br><br>
+                        <img src="assets/images/about.jpg" alt="HTML Structure" width="900" height="450" /><br><br>
+
+
+				
+
+
+				</li></li>
+
+				</ol>
+
+
+
+				<hr>
+
+				<p></p> 
+
+				<h3 id="credits"><strong>E) Change apps splash screen </strong> - <a href="#toc">top</a></h3>
+
+				<p></p>
+
+				<ul>
+				
+					<li>	Change splash screen Just replace your image with existing image<br>
+ <b style="color:red;">app\src\main\res\drawable-hdpi\splasssh.jpg"</b><br><br><img src="assets/images/spl.png" alt="HTML Structure" width="900" height="450" /></li>
+
+				</ol>
+
+
+
+				<hr>
+
+				<p></p> 
+
+				<h3 id="credits1"><strong>F) Change app launcher icon </strong> - <a href="#toc">top</a></h3>
+
+				<p></p>
+
+				<ul>
+					<li>
+
+						Change launcher icon  
+     Just replace your image with existing image<br>
+      Go to <b style="color:red;"> res/mipmap </b>folder in android studio <br>
+     -> right click on it and select new <br>
+     -> then on right window select Image Asset <br>
+     -> then on that select path from right side of this icon '...' <br>
+     -> select image location where you <br>
+     -> then next  <br>
+     -> then finish <br><br><br>
+     <img src="assets/images/cl3.jpg" alt="HTML Structure" width="900" height="450" /></li>
+
+				</ol>
+
+
+				<hr>
+
+				<p></p> 
+				<h3 id="credits2"><strong>G) Change logo / icons of app </strong> - <a href="#toc">top</a></h3>
+
+				<p></p>
+
+				Paste your logo at location \app\src\main\res\drawable\your_icon<br>
+      Go to <b style="color:red;"> layout/activity_main </b>folder in android studio <br>
+   <br>
+     <img src="assets/images/clogo2.jpg" alt="HTML Structure" width="900" height="450" />
+ <br><br>
+    Go to <b style="color:red;"> layout/drawerhome </b>folder in android studio <br>
+     -> Replace your logo with existing one  <br><br>
+    <img src="assets/images/clogo1.jpg" alt="HTML Structure" width="900" height="450" />
+				</ol>
+
+
+				<hr>
+
+				<p></p> 
+
+				<p class="append-bottom alt large"><strong>Your Name</strong></p>
+				<p><a href="#toc">Go To Index</a></p>
+
+				<hr class="space">
+			</div><!-- end div .container -->
+		</body>
+		</html>

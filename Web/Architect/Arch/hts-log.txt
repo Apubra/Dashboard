@@ -1,0 +1,43 @@
+HTTrack3.49-2 launched on Wed, 22 Jan 2020 11:09:06 at https://dashboardpack.com/live-demo-preview/?livedemo=290 +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/*
+(webhttrack -q -%i -w https://dashboardpack.com/live-demo-preview/?livedemo=290 -O "/home/apubra/websites/Arch" -n -%P -N0 -s2 -p7 -D -a -K0 -c4 -%k -A25000 -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -%s -%u )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:09:49	Warning: 	Moved Permanently for cdnjs.cloudflare.com/robots.txt
+11:09:49	Warning: 	File has moved from cdnjs.cloudflare.com/robots.txt to http://www.cdnjs.com/
+11:09:49	Warning: 	Moved Permanently for cdnjs.cloudflare.com/
+11:09:49	Warning: 	File has moved from cdnjs.cloudflare.com/ to http://www.cdnjs.com/
+11:09:51	Error: 	"Forbidden" (403) at link js.braintreegateway.com/ (from https://dashboardpack.com/live-demo-preview/?livedemo=290)
+11:09:51	Warning: 	HTML file (881 bytes) retransferred due to lack of cache: https://dashboardpack.com/feed/
+11:09:51	Warning: 	HTML file (775 bytes) retransferred due to lack of cache: https://dashboardpack.com/comments/feed/
+11:09:54	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-includes/js/jquery/jquery.js
+11:09:54	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js
+11:09:55	Warning: 	HTML file (566057 bytes) retransferred due to lack of cache: https://dashboardpack.com/wp-json/
+11:10:12	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/google-analytics-premium/assets/js/frontend.min.js
+11:10:13	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-includes/js/jquery/jquery-migrate.min.js
+11:10:14	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-includes/js/jquery/ui/core.min.js
+11:10:14	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-includes/js/jquery/ui/datepicker.min.js
+11:10:15	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js
+11:10:35	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/yith-woocommerce-affiliates/assets/js/yith-wcaf.min.js
+11:10:35	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js
+11:10:36	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/contact-form-7/includes/js/scripts.js
+11:10:37	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js
+11:10:38	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js
+11:10:38	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js
+11:10:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://js.jilt.com/storefront/v1/jilt.js
+11:10:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/jilt-for-woocommerce/assets/js/frontend/wc-jilt-subscribe-form.min.js
+11:10:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js
+11:10:40	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/themes/dashboardpack/assets/js/main.min.js
+11:10:42	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce/assets/js/jquery-payment/jquery.payment.min.js
+11:10:42	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce-gateway-paypal-powered-by-braintree/lib/skyverge/woocommerce/payment-gateway/assets/js/frontend/sv-wc-payment-gateway-payment-form.min.js
+11:10:42	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce-gateway-paypal-powered-by-braintree/lib/skyverge/woocommerce/payment-gateway/assets/js/frontend/sv-wc-payment-gateway-apple-pay.min.js
+11:10:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/woocommerce-gateway-paypal-powered-by-braintree/assets/js/frontend/wc-braintree-apple-pay.min.js
+11:10:44	Warning: 	File seems complete (same size), but there was a cache read error (4294967295): https://dashboardpack.com/wp-content/plugins/wp-rocket/assets/js/lazyload/12.0/lazyload.min.js
+11:11:18	Warning: 	HTML file (72243 bytes) retransferred due to lack of cache: https://dashboardpack.com/live-demo-preview/?livedemo=2386
+11:11:20	Error: 	"Not Found" (404) at link https://dashboardpack.com/wp-content/themes/dashboardpack/ajax-loader.gif (from https://dashboardpack.com/wp-content/themes/dashboardpack/style.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 2 minutes 14 seconds : 84 links scanned, 108 files written (3504727 bytes overall) [1611013 bytes received at 12022 bytes/sec], 2427531 bytes transferred using HTTP compression in 74 files, ratio 22%, 3.1 requests per connection
+(2 errors, 30 warnings, 0 messages)

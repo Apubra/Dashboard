@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#31cca5</color>
+    <color name="colorAccent">#26a98a</color>
+    <color name="labelcolor">#53a175</color>
+    <color name="textcolor">#156BBF</color>
+    <color name="White">#FFF</color>
+    <color name="headtextcolor">#919191</color>
+    <color name="linecolor">#c2c1c1</color>
+    <color name="Edittextcolor">#3b3b3b</color>
+    <color name="homepagetextcolor">#2f4269</color>
+    <color name="formheadtextcolor">#929497</color>
+    <color name="formedittextcolor">#57585a</color>
+    <color name="bottomsheettextcolor">#3f3f41</color>
+    <color name="bootomsheetlinecolor">#bbbdbf</color>
+    <color name="redcolor">#ed1b23</color>
+    <color name="white">#FFF</color>
+    <color name="black">#0c0c0d</color>
+    <color name="shadowColor">#10CCCCCC</color>
+    <color name="green_400">#C8C8C8</color>
+    <color name="green_500">#4CAF50</color>
+    <color name="dialogblue">#028fd6</color>
+    <color name="dialoggray">#ededed</color>
+</resources>

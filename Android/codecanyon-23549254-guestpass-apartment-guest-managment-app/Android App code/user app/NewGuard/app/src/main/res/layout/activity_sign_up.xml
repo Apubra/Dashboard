@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.wk.guestpass.app.Activities.SignUpActivity">
+
+    <RelativeLayout
+        android:id="@+id/homeimage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#30caa5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:paddingBottom="14dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradd1">
+
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="30dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="15dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/stext2"
+                    android:textColor="#fff"
+                    android:textSize="16sp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/llo"
+            android:layout_width="240dp"
+            android:src="@drawable/aa"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="152dp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/bottomlay"
+        android:layout_below="@+id/homeimage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="10dp"
+            android:orientation="vertical"
+            android:weightSum="3">
+
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/homeimage"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:weightSum="7">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="1dp"
+                        android:weightSum="1.5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.5"
+                            android:elevation="1dp">
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/refcode"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="Ref-Code"
+                                android:imeOptions="actionDone"
+                                android:paddingLeft="10dp"
+                                android:singleLine="true"
+                                android:textColorHint="#8b8b8b"
+                                android:textSize="14sp"
+                                android:theme="@style/EditText.Green" />
+
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/check"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:elevation="3dp"
+                            android:foreground="?attr/selectableItemBackgroundBorderless"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/ordercircle">
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_check_black_24dp" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/show"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/solidborders"
+                        android:padding="3dp"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            android:id="@+id/aprtname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="@font/ubuntu"
+                            android:gravity="left"
+                            android:paddingLeft="5dp"
+                            android:text="Text will be here"
+                            android:textSize="13sp" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border4"
+                        android:padding="1dp">
+
+                        <Spinner
+                            android:id="@+id/flatname"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:paddingLeft="10dp"
+                            android:spinnerMode="dialog" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableLeft="@drawable/ic_users1"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ubuntu"
+                            android:hint="Name"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:textColorHint="#8b8b8b"
+                            android:textSize="14sp"
+                            android:theme="@style/EditText.Green" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableLeft="@drawable/ic_envelope"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ubuntu"
+                            android:hint="Email"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textColorHint="#8b8b8b"
+                            android:textSize="14sp"
+                            android:theme="@style/EditText.Green" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:padding="1dp">
+
+                        <!-- <ImageView
+                             android:layout_gravity="center_vertical"
+                             android:src="@drawable/ic_phone_call"
+                             android:layout_marginLeft="10dp"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content" />-->
+
+
+                        <android.support.design.widget.TextInputEditText
+                            android:id="@+id/number"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:drawableLeft="@drawable/ic_phone_call"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/ubuntu"
+                            android:hint="Phone Number"
+                            android:imeOptions="actionNext"
+                            android:inputType="number"
+                            android:maxLength="12"
+                            android:singleLine="true"
+                            android:textColorHint="#8b8b8b"
+                            android:textSize="14sp"
+                            android:theme="@style/EditText.Green" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <!--<ImageView
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/ic_padlock"
+                                android:layout_marginLeft="10dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />-->
+
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/pin"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableLeft="@drawable/ic_padlock"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="Pin"
+                                android:imeOptions="actionNext"
+                                android:inputType="numberPassword"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textColorHint="#8b8b8b"
+                                android:textSize="14sp"
+                                android:theme="@style/EditText.Green" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="1dp">
+
+                            <!-- <ImageView
+                                 android:layout_gravity="center_vertical"
+                                 android:src="@drawable/ic_padlock"
+                                 android:layout_marginLeft="10dp"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content" />
+             -->
+
+                            <android.support.design.widget.TextInputEditText
+                                android:id="@+id/cpin"
+                                android:layout_width="match_parent"
+                                android:layout_height="40dp"
+                                android:drawableLeft="@drawable/ic_padlock"
+                                android:drawablePadding="10dp"
+                                android:fontFamily="@font/ubuntu"
+                                android:hint="Confirm Pin"
+                                android:imeOptions="actionDone"
+                                android:inputType="numberPassword"
+                                android:maxLength="10"
+                                android:singleLine="true"
+                                android:textColorHint="#8b8b8b"
+                                android:textSize="14sp"
+                                android:theme="@style/EditText.Green" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/tc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#31cca5" />
+
+
+                <TextView
+                    android:id="@+id/accept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="@string/stext"
+                    android:textColor="#31cca5"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/terms"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/signup"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/gradd2"
+                    android:elevation="0dp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"
+                    android:fontFamily="@font/ubuntu"
+                    android:text="@string/stext2"
+                    android:textColor="#fff"
+                    android:textSize="18sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/signup"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/acc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stext3" />
+
+
+                    <TextView
+                        android:id="@+id/login"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/acc"
+                        android:text="@string/stext1"
+                        android:textAllCaps="true"
+                        android:textColor="#31cca5"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

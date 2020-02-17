@@ -1,0 +1,75 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style parent="Theme.MaterialComponents.Light.BottomSheetDialog" name="SheetDialog">
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:colorBackground">@android:color/transparent</item>
+
+        <item name="android:backgroundDimEnabled">false</item>
+
+        <item name="android:backgroundDimAmount">0.5</item>
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+    </style>
+    <style parent="Theme.MaterialComponents.Light.BottomSheetDialog" name="SimpleDialog">
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:colorBackground">@android:color/transparent</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:backgroundDimAmount">0.5</item>
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+    </style>
+    <style parent="Theme.MaterialComponents.Light.BottomSheetDialog" name="qrcode">
+
+        <item name="android:windowIsTranslucent">true</item>
+
+        <item name="android:colorBackground">@android:color/transparent</item>
+
+        <item name="android:backgroundDimEnabled">true</item>
+
+        <item name="android:backgroundDimAmount">0.5</item>
+
+        <item name="android:windowFrame">@null</item>
+
+        <item name="android:windowIsFloating">true</item>
+
+    </style>
+    <style name="MyActionBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+
+    <style name="Searchview" parent="Widget.AppCompat.SearchView">
+        <!-- Gets rid of the "underline" in the text -->
+        <item name="queryBackground">@color/colorPrimaryDark</item>
+        <item name="searchIcon">@drawable/ic_search</item>
+        <!-- The hint text that appears when the user has not typed anything -->
+    </style>
+
+    <style name="EditText.Green" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/green_500</item>
+        <item name="colorControlHighlight">#C8C8C8</item>
+        <item name="colorControlNormal">@color/green_400</item>
+    </style>
+
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f5f1f1"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:background="#de8e0d"
+        android:paddingBottom="20dp">
+
+
+        <ImageView
+            android:id="@+id/walletback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:src="@drawable/ic_backdark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="#fff"
+            android:text="Wallet Statement"
+            android:textSize="20dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="57dp"
+            android:src="@drawable/ic_wallet" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:baselineAlignBottom="true"
+            android:text="2350"
+            android:textColor="#645353" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#fff">
+        <LinearLayout
+            android:id="@+id/laycv1"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#bc7c14"
+            android:weightSum="7"
+            android:gravity="center"
+            android:layout_gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/ubuntu"
+                android:gravity="center"
+                android:text="Date/Time"
+                android:textColor="#fff" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.5"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:fontFamily="@font/ubuntu"
+                android:text="Description"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:fontFamily="@font/ubuntu"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:textColor="#fff"
+                android:text="Amount"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:fontFamily="@font/ubuntu"
+                android:textColor="#fff"
+                android:text="Bal."/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/logout132111"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAnimals12111"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+
+
+    <!--     <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginRight="5dp"
+             android:layout_marginLeft="10dp"
+             android:layout_weight="1"
+             app:cardCornerRadius="5dp">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="horizontal">
+                 <ImageView
+                     android:layout_width="45dp"
+                     android:layout_height="45dp"
+                     android:paddingTop="5dp"
+
+                     android:paddingBottom="5dp"
+                     android:layout_marginLeft="10dp"
+                     android:src="@drawable/ic_thumbup"/>
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_vertical"
+                     android:layout_marginLeft="7dp"
+                     android:textColor="#0a3d50"
+                     android:textSize="18dp"
+                     android:text="Pay"/>
+             </LinearLayout>
+
+         </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="5dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/ic_thumbdown"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="7dp"
+                android:textColor="#0a3d50"
+                android:textSize="18dp"
+                android:text="History"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>-->
+
+    <!--
+        <LinearLayout
+            android:id="@+id/layout2"
+            android:layout_width="match_parent"
+            android:layout_below="@id/layout1"
+            android:layout_height="240dp">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rvAnimals2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingBottom="172dp" />
+        </LinearLayout>
+    -->
+
+    <!--//sharing button
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_anchorGravity="bottom|right|end"
+            app:srcCompat="@android:drawable/ic_menu_share"/>
+    -->

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#fff"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:paddingBottom="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:src="@drawable/help"
+                android:layout_width="220dp"
+                android:layout_height="120dp" />
+
+            <TextView
+                android:id="@+id/helps"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_bold"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#484848"
+                android:text="@string/dtext1" />
+
+            <TextView
+                android:id="@+id/contents"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="13sp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="10dp"
+                android:textColor="#939393"
+                android:text="@string/htext" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="13sp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="2dp"
+                android:textColor="#939393"
+                android:text="@string/htext1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="13sp"
+                android:includeFontPadding="false"
+                android:layout_marginTop="2dp"
+                android:textColor="#939393"
+                android:text="@string/htext2" />
+
+
+            <TextView
+                android:id="@+id/hnames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:includeFontPadding="false"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_profile"
+                android:layout_marginTop="25dp"
+                android:textColor="#3f3f41"
+                android:text="@string/htext3" />
+
+            <TextView
+                android:id="@+id/aprtname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:includeFontPadding="false"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/ic_buildings"
+                android:layout_marginTop="5dp"
+                android:textColor="#3f3f41"
+                android:text="@string/htext4" />
+
+            <TextView
+                android:id="@+id/no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:drawablePadding="5dp"
+                android:includeFontPadding="false"
+                android:drawableLeft="@drawable/ic_auricular"
+                android:layout_marginTop="5dp"
+                android:textColor="#3f3f41"
+                android:text="@string/htext5" />
+
+
+            <Button
+                android:id="@+id/call"
+                android:textSize="18sp"
+                android:text="@string/htext6"
+                android:textAllCaps="false"
+                android:includeFontPadding="false"
+                android:textColor="#fff"
+                android:background="@drawable/gradd2"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_marginTop="35dp"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

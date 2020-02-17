@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:background="#e9e7e7"
+    tools:context="com.wk.guestpass.app.Fragments.UpcGuest">
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:background="@drawable/gradient1"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_backdark" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/ubuntu"
+            android:layout_marginLeft="50dp"
+            android:textColor="#fff"
+            android:text="Upcoming Guest"
+            android:textSize="20dp" />
+
+        <android.support.v7.widget.SearchView
+            style="@style/Searchview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchview"
+            android:layout_toLeftOf="@+id/logout"
+            android:layout_marginRight="5sp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_search"
+            app:searchIcon="@drawable/ic_search" />
+
+        <ImageView
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/ic_power" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/layout1">
+
+        <ImageView
+            android:src="@drawable/nodatahome"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:padding="70sp"
+            android:id="@+id/nodaata" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeToRefresh"
+            android:layout_below="@+id/mainheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/UpcomingRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="70dp"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+</LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blacktransparent"
+        android:visibility="gone"
+        android:clickable="false"
+        android:id="@+id/overmain">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="2" />
+
+        <!--  <pl.droidsonroids.gif.GifImageView
+              android:id="@+id/gifImageView"
+              android:layout_centerVertical="true"
+              android:layout_centerHorizontal="true"
+              android:visibility="visible"
+              android:src="@drawable/triangles"
+              android:layout_width="180sp"
+              android:layout_height="180sp"/>
+  -->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/gifImageView"
+            style="@style/SpinKitView.CubeGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgrnd"
+        android:visibility="gone"
+        android:background="@drawable/blacktransparent"/>
+
+</FrameLayout>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context="com.wk.guestpass.guard.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/first"
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+
+        <RelativeLayout
+            android:background="#fff"
+            android:paddingBottom="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/gradd1" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_width="160dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo" />
+
+        </RelativeLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/llo"
+            android:layout_width="240dp"
+            android:src="@drawable/aa"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="152dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentBottom="true"
+            android:fontFamily="@font/ubuntu"
+            android:textSize="22sp"
+            android:textColor="#fff"
+            android:text="Guard Login" />
+
+    </RelativeLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="40sp"
+         android:layout_marginRight="40sp"
+         android:layout_marginBottom="35dp"
+         android:layout_marginTop="35sp"
+         android:id="@+id/bottomlay"
+         android:layout_below="@+id/first"
+         android:orientation="vertical">
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:drawableLeft="@drawable/ic_mobile"
+             android:drawablePadding="5sp"
+             android:fontFamily="@font/lato"
+             android:gravity="center"
+             android:text="@string/mobile"
+             android:textColor="@color/headtextcolor"
+             android:textSize="11sp" />
+
+         <EditText
+             android:id="@+id/mobile"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="5sp"
+             android:layout_marginBottom="5sp"
+             android:background="@null"
+             android:theme="@style/EditText.Green"
+             android:fontFamily="@font/source_sans_pro"
+             android:hint="@string/hint"
+             android:cursorVisible="true"
+             android:textCursorDrawable="@null"
+             android:inputType="phone"
+             android:maxLength="12"
+             android:textColor="@color/Edittextcolor" />
+
+         <View
+             android:layout_width="match_parent"
+             android:background="@color/linecolor"
+             android:layout_height="1sp" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="10sp"
+             android:gravity="center"
+             android:drawablePadding="5sp"
+             android:fontFamily="@font/lato"
+             android:drawableLeft="@drawable/ic_pin"
+             android:textColor="@color/headtextcolor"
+             android:textSize="11sp"
+             android:text="@string/pin" />
+
+         <EditText
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:id="@+id/pins"
+             android:layout_marginTop="5sp"
+             android:layout_marginBottom="5sp"
+             android:background="@null"
+             android:theme="@style/EditText.Green"
+             android:cursorVisible="true"
+             android:textCursorDrawable="@null"
+             android:fontFamily="@font/source_sans_pro"
+             android:textColor="@color/Edittextcolor"
+             android:hint="@string/hint1"
+             android:inputType="numberPassword" />
+
+         <View
+             android:layout_width="match_parent"
+             android:background="@color/linecolor"
+             android:layout_height="1sp" />
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="45dp"
+             android:layout_gravity="center"
+             android:text="@string/guardlogin"
+             android:fontFamily="@font/lato"
+             android:id="@+id/loginbtn"
+             android:textAllCaps="true"
+             android:layout_marginBottom="10sp"
+             android:layout_marginTop="30sp"
+             android:layout_marginLeft="15sp"
+             android:layout_marginRight="15sp"
+             android:paddingTop="5sp"
+             android:paddingBottom="5sp"
+             android:gravity="center"
+             android:elevation="2dp"
+             android:background="@drawable/gradd2"
+             android:textSize="18sp"
+             android:textColor="@color/White" />
+
+     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blacktransparent"
+        android:visibility="gone"
+        android:clickable="false"
+        android:id="@+id/overmain">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="2" />
+
+        <!--  <pl.droidsonroids.gif.GifImageView
+              android:id="@+id/gifImageView"
+              android:layout_centerVertical="true"
+              android:layout_centerHorizontal="true"
+              android:visibility="visible"
+              android:src="@drawable/triangles"
+              android:layout_width="180sp"
+              android:layout_height="180sp"/>
+  -->
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/gifImageView"
+            style="@style/SpinKitView.CubeGrid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            app:SpinKit_Color="@color/colorAccent" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bgrnd"
+        android:visibility="gone"
+        android:background="@drawable/blacktransparent"/>
+
+
+</RelativeLayout>
